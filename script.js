@@ -201,7 +201,7 @@ function animate() {
   ballBoundaries();
   computerAI();
   gameOver();
-  if (!gameOver) {
+  if (!isGameOver) {
     window.requestAnimationFrame(animate);
   }
 }
@@ -213,7 +213,7 @@ function startGame() {
     canvas.hidden = false;
   }
   isGameOver = false;
-  isNewGame = false;
+  isNewGame = true;
   playerScore = 0;
   computerScore = 0;
   ballReset();
